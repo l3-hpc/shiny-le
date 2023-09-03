@@ -83,7 +83,7 @@ dashboardPage(
              #Plot limits
              column(width=3,
                     radioButtons("radio", "Plot Limits",
-                                  choices = list("Each model's min/max" = 1, "Both model's min/max" = 2),
+                                  choices = list("Both model's min/max" = 1, "Each model's min/max" = 2 ),
                                   selected = 1)),
              #Add the slider, modify times as needed
                column(width=6,

@@ -205,11 +205,11 @@ function(input, output, session) {
       bot_label <- paste("Bottom:  min=",ib_min,
                          "max=",ib_max)
       #Ylimits for plot
-      if(input$radio == "1"){  
+      if(input$radio == "2"){  
         #choose range based on model values
         ymi <- min(min(Surf),min(Bot))
         yma <- max(max(Surf),max(Bot))
-      }else if(input$radio == "2") {
+      }else if(input$radio == "1") {
         #Ylimits based on both models
         Surf2 <- model[[inode]]$v2surf[ind_1:ind_2]
         Bot2 <- model[[inode]]$v2bot[ind_1:ind_2]
@@ -285,11 +285,11 @@ function(input, output, session) {
       bot_label <- paste("Bottom:  min=",ib_min,
                          "max=",ib_max)
       #Ylimits for plot
-      if(input$radio == "1"){  
+      if(input$radio == "2"){  
         #choose range based on model values
         ymi <- min(min(Surf),min(Bot))
         yma <- max(max(Surf),max(Bot))
-      }else if(input$radio == "2") {
+      }else if(input$radio == "1") {
         #Ylimits based on both models
         Surf2 <- model[[inode]]$v1surf[ind_1:ind_2]
         Bot2 <- model[[inode]]$v1bot[ind_1:ind_2]
