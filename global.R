@@ -4,6 +4,10 @@
 # variable name 'v1' and 'v2' are used to make things generic
 # Change the labels in labels.R for TP vs TP_leem vs TP_sinkout/nosinkout, etc.
 #
+
+#Where is your data(rds files), relative to this directory?
+data_dir <- "data"
+
 #gid=global index
 #h=depth
 #X,Y=zonal coordinates
@@ -14,16 +18,16 @@
 #grid info for location and color of circles
 # gid, h, lat, lon, X, Y, 
 # v1meansurf, v1meanbot, v2meansurf, v2meanbot
-grid <- readRDS("data/le_grid.rds")
+grid <- readRDS(file.path(data_dir,"le_grid.rds"))
 #river info: node, name, image, gid, lat, lon
-river <- readRDS("data/le_rivers.rds")
+river <- readRDS(file.path(data_dir,"le_rivers.rds"))
 #Time array
-time <- readRDS("data/le_time.rds")
+time <- readRDS(file.path(data_dir,"le_time.rds"))
 #model data, list of dataframes with timeseries of
 # v1surf, v1bot, v2surf, v2bot
-model <- readRDS("data/le_data.rds")
+model <- readRDS(file.path(data_dir,"le_data.rds"))
 #Measured station data: gid, date, TP
-st_data <- readRDS("data/le_stations.rds")
+st_data <- readRDS(file.path(data_dir,"le_stations.rds"))
 #Station location info for popups: gid, name, lat, lon
-st_loc <- readRDS("data/le_pop.rds")
+st_loc <- readRDS(file.path(data_dir,"le_pop.rds"))
 
