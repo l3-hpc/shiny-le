@@ -1,6 +1,21 @@
 # shiny-le
 Lake Erie R Shiny
 
+## Environment
+These were tested in R Studio.
+
+Required libraries for reformatting
+- ncdf4
+- lubridate
+- rlist
+- dplyr
+
+Required libraries for R Shiny App
+- shinydashboard
+- RColorBrewer
+- leaflet
+- dplyr
+
 ## Get the repo
 ```
 git clone https://github.com/l3-hpc/shiny-le.git
@@ -16,24 +31,6 @@ output_nosinkout
 
 ## Open in R Studio
 I did not test these as batch scripts.
-
-Required libraries:
-```
-#to read model output netCDF
-library(ncdf4)
-#for ymd_hms
-library(lubridate)
-#To append dataframes to list: list.append
-library(rlist)
-#df operations: arrange, distinct
-library(dplyr)
-#The dashboard version of Shiny
-library(shinydashboard)
-#For colormap
-library(RColorBrewer)
-#Leaflet is for the interactive map
-library(leaflet)
-```
 
 In R Studio, go to the shiny-le folder(this repo), set as the working directory.  
 
