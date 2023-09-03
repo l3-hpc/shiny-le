@@ -1,1 +1,1 @@
-install.packages(c("dplyr","shinydashboard","leaflet"))
+install.packages(c("dplyr","shinydashboard","leaflet","RColorBrewer"))
