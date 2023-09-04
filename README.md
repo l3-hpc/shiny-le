@@ -92,3 +92,10 @@ DefineScalarExpression("TPtot", "RPOP + LPOP + RDOP + LDOP + PO4T + LPIP + RPIP 
 ```
 
 They should be exactly the same.
+
+The file LEEM_2013_Calculated_Time0.nc has data every 6 hours.  Crop it, since I did daily outputs on Expanse:
+Make a small version, just TP:
+```
+ncks -d time,0,979,4  TP.nc TP_crop.nc
+```
+
