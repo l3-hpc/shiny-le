@@ -5,8 +5,8 @@
 # Change the labels in labels.R for TP vs TP_leem vs TP_sinkout/nosinkout, etc.
 #
 
-#Where is your data(rds files), relative to this directory?
-data_dir <- "data"
+#Location of data(rds files), relative to this directory is defined in labels.R
+source("labels.R")
 
 #gid=global index
 #h=depth
@@ -31,3 +31,5 @@ st_data <- readRDS(file.path(data_dir,"le_stations.rds"))
 #Station location info for popups: gid, name, lat, lon
 st_loc <- readRDS(file.path(data_dir,"le_pop.rds"))
 
+#Resize the circles
+#grid$circle <- grid$h**(1/3)

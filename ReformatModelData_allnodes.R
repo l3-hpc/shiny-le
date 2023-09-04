@@ -2,7 +2,6 @@
 # Create rds's of model outputs for shiny,
 #  including top and bottom layer timeseries for both models,
 #  and yearly mean surface and bottom TP.
-
 #to read model output netCDF
 library(ncdf4)
 #for ymd_hms
@@ -13,13 +12,15 @@ library(rlist)
 library(dplyr)
         
 #--Model data
-var1file <- "output_nosinkout/leem_0001.nc"
-var2file <- "output_sinkout/leem_0001.nc"
+#var1file <- "output_nosinkout/leem_0001.nc"
+var1file <- "output_sinkout/leem_0001.nc"
+#var2file <- "output_sinkout/leem_0001.nc"
+var2file <- "output_leem/TP_leem_crop.nc"
 
 #--Shiny fixed rds files
 fixed_dir <- "data_fixed"
 #--Final Shiny rds files
-shiny_dir <- "data"
+shiny_dir <- "data_sinkout_vs_leem"
 #-----END USER MODIFY---
 
 #-------Directory checking-----

@@ -97,8 +97,8 @@ function(input, output, session) {
     leafletProxy("map", data = df) %>%
       clearShapes() %>%
       clearControls() %>%
-      addCircles(~lon, ~lat, radius=300, layerId=~gid,label=~gid,
-                  stroke=FALSE, fillOpacity=1, 
+      addCircles(~lon, ~lat, radius=400, layerId=~gid,label=~gid,
+                  stroke=FALSE, fillOpacity=.8, 
                   fillColor=~pal(mean),group="Model")                %>%   
       addLegend("bottomright", pal = pal, values = ~mean,
                     title = legendtitle,group=groupname,opacity = 1)    %>%
