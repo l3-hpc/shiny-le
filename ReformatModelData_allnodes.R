@@ -10,18 +10,30 @@ library(lubridate)
 library(rlist)
 #df operations: arrange, distinct
 library(dplyr)
-        
-#--Model data
-#var1file <- "output_nosinkout/leem_0001.nc"
-var1file <- "output_sinkout/leem_0001.nc"
-#var2file <- "output_sinkout/leem_0001.nc"
-var2file <- "output_leem/TP_leem_crop.nc"
 
+#--Model data
+##Compare no sink out w/sinkout
+var1file <- "output_nosinkout/leem_0001.nc"
+var2file <- "output_sinkout/leem_0001.nc"
+
+#Compare sinkout w/LEEM
+#var1file <- "output_sinkout/leem_0001.nc"
+#var2file <- "output_leem/TP_crop.nc"
+
+#Compare nosinkout w/LEEM
+#var1file <- "output_nosinkout/leem_0001.nc"
+#var2file <- "output_leem/TP_crop.nc"
+
+#--Final Shiny rds files
+#shiny_dir <- "data_nosinkout_vs_sinkout"
+#shiny_dir <- "data_nosinkout_vs_leem"
+#shiny_dir <- "data_sinkout_vs_leem"
+shiny_dir <- "data"
+#-----END USER MODIFY---
+
+##Don't change this one
 #--Shiny fixed rds files
 fixed_dir <- "data_fixed"
-#--Final Shiny rds files
-shiny_dir <- "data_sinkout_vs_leem"
-#-----END USER MODIFY---
 
 #-------Directory checking-----
 #--The inputs should exist
