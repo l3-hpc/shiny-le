@@ -65,24 +65,23 @@ cd output_leem
 wget https://renc.osn.xsede.org/ees210015-bucket01/LEEM_2013_Calculated_Time0.nc
 ```
 
-Create netCDF with just TP. *(This is inefficient and slow, but we can fix that later.)*
+Create netCDF with just TP. *(This could probably be improved...)*
 
-Make a copy:
+Get the basic variables and dimensions, not ZOO:
 ```
-cp LEEM_2013_Calculated_Time0.nc TP_leem.nc
+ncks -v time,x,xc,y,yc,zeta,siglay,siglev,h,lat,latc,lon,lonc,nprocs,nv,partition,siglay_shift,RPOP,LPOP,RDOP,LDOP,PO4T,LPIP,RPIP LEEM_2013_Calculated_Time0.nc TP_leem.nc
 ```
-ncap2 can't add variables and divide at the same time (or at least, I couldn't figure out how), so make and add three new ZOO variables.
+ncap2 can't add variables and divide at the same time (or at least, I couldn't figure out how), so make and add three new ZOO variables.  Append to the existing file (a).
 ```
 ncap2 -s"ZOO1=ZOO1/50.;ZOO2=ZOO2/50.;ZOO3=ZOO3/50.;" -v LEEM_2013_Calculated_Time0.nc TP_leem.nc
 a
 ```
-Add the TP variable
+Add the TP variable, append to existing file.
 ```
 ncap2 -s"TP=RPOP+LPOP+RDOP+LDOP+PO4T+LPIP+RPIP+ZOO1+ZOO2+ZOO3" -v TP_leem.nc TP_leem.nc
 a
 ```
-Get rid of the other variables, rename.
+Make a small version, just TP:
 ```
-ncks -x -v CHL,PHYT1,PHYT2,PHYT3,PHYT4,PHYT5,RPOP,LPOP,RDOP,LDOP,PO4T,RPON,LPON,RDON,LDON,NH4T,NO23,BSI,SIT,RPOC,LPOC,RDOC,LDOC,EXDOC,REPOC,REDOC,O2EQ,DO,ZOO1,ZOO2,ZOO3,BALG,DYE,LPIP,RPIP,IPOP,IPON,IPOC,Hyp2_Area TP_leem.nc TP2_leem.nc
-mv TP2_leem.nc TP_leem.nc
+ncks -v time,x,xc,y,yc,zeta,siglay,siglev,h,lat,latc,lon,lonc,nprocs,nv,partition,siglay_shift,TP TP_leem.nc TP.nc
 ```
