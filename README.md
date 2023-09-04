@@ -67,9 +67,9 @@ wget https://renc.osn.xsede.org/ees210015-bucket01/LEEM_2013_Calculated_Time0.nc
 
 Create netCDF with just TP. *(This could probably be improved...)*
 
-Get the basic variables and dimensions, not ZOO:
+Copy:
 ```
-ncks -v time,x,xc,y,yc,zeta,siglay,siglev,h,lat,latc,lon,lonc,nprocs,nv,partition,siglay_shift,RPOP,LPOP,RDOP,LDOP,PO4T,LPIP,RPIP LEEM_2013_Calculated_Time0.nc TP_leem.nc
+ncks -O LEEM_2013_Calculated_Time0.nc TP_leem.nc
 ```
 ncap2 can't add variables and divide at the same time (or at least, I couldn't figure out how), so make and add three new ZOO variables.  Append to the existing file (a).
 ```
@@ -83,5 +83,5 @@ a
 ```
 Make a small version, just TP:
 ```
-ncks -v time,x,xc,y,yc,zeta,siglay,siglev,h,lat,latc,lon,lonc,nprocs,nv,partition,siglay_shift,TP TP_leem.nc TP.nc
+ncks -v TP,h,iint,lat,latc,lon,lonc,nprocs,nv,partition,siglay,siglay_shift,siglev,time,x,xc,y,yc,zeta TP_leem.nc TP.nc
 ```
