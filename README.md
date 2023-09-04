@@ -1,8 +1,6 @@
 # shiny-le
 Lake Erie R Shiny
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/l3-hpc/shiny-le/HEAD?urlpath=rstudio)
-
 ## Environment
 These were tested in R Studio.
 
