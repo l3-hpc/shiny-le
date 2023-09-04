@@ -90,3 +90,5 @@ Use VisIt to test by opening TP.nc and LEEM_2013_Calculated_Time0.nc, with TP de
 ```
 DefineScalarExpression("TPtot", "RPOP + LPOP + RDOP + LDOP + PO4T + LPIP + RPIP + (ZOO1 + ZOO2 + ZOO3)/50.0")
 ```
+
+They should be exactly the same.
