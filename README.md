@@ -44,7 +44,7 @@ var1file <- "output_nosinkout/leem_0001.nc"
 var2file <- "output_sinkout/leem_0001.nc"
 ```
 
-If you don't want to write over the example rds in this repo, set `shiny_dir` to something else.
+If you don't want to write over the example rds in this repo, set `shiny_dir` to something else.  To run these instructions in the github repo without tracking the new data, name the directory with ***data_***.  (The ***.gitignore*** file ignores everything starting with ***data_***.)
 
 Click **Source**.  This should make new rds files in you `shiny_dir`, or overwrite the ones already in `data`.
 
@@ -58,7 +58,9 @@ Open ***global.R***, ***ui.R***, or ***server.R***.  Any of these will have a **
 ## Additional steps for LEEM data
 Using this example...
 
-Make a directory starting with 'output'.  Get sample file.
+Make a directory starting with 'output'.  (The ***.gitignore*** file ignores everything starting with ***data_***.)  
+
+Try a sample file:
 ```
 mkdir output_leem
 cd output_leem
