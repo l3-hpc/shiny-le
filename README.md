@@ -25,7 +25,7 @@ cd shiny-le
 ```
 
 ## Add the model files
-Any directory starting with 'output' is git-ignored.  For the example, I am using:
+Add FVCOM model outputs to a directory named starting with ***output***. (The ***.gitignore*** file ignores everything starting with ***output***.)For the example, I am using:
 ```
 output_sinkout
 output_nosinkout
