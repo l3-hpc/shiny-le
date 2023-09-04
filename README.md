@@ -58,7 +58,7 @@ Open ***global.R***, ***ui.R***, or ***server.R***.  Any of these will have a **
 ## Additional steps for LEEM data
 Using this example...
 
-Make a directory starting with 'output'.  (The ***.gitignore*** file ignores everything starting with ***data_***.)  
+Make a directory starting with ***output***.  (The ***.gitignore*** file ignores everything starting with ***output***.)  
 
 Try a sample file:
 ```
@@ -67,7 +67,7 @@ cd output_leem
 wget https://renc.osn.xsede.org/ees210015-bucket01/LEEM_2013_Calculated_Time0.nc
 ```
 
-Create netCDF with just TP.
+Create netCDF with just TP. *(This is inefficient and slow, but we can fix that later.)*
 
 Make a copy:
 ```
