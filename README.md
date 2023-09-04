@@ -85,3 +85,8 @@ Make a small version, just TP:
 ```
 ncks -v TP,h,iint,lat,latc,lon,lonc,nprocs,nv,partition,siglay,siglay_shift,siglev,time,x,xc,y,yc,zeta TP_leem.nc TP.nc
 ```
+
+Use VisIt to test by opening TP.nc and LEEM_2013_Calculated_Time0.nc, with TP defined as:
+```
+DefineScalarExpression("TPtot", "RPOP + LPOP + RDOP + LDOP + PO4T + LPIP + RPIP + (ZOO1 + ZOO2 + ZOO3)/50.0")
+```
