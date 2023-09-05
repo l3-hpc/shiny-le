@@ -11,6 +11,7 @@
 library(shinydashboard)
 #For colormap
 library(RColorBrewer)
+library(viridis)
 #To filter dataframes
 library(dplyr)
 
@@ -63,7 +64,8 @@ function(input, output, session) {
        if(input$colorby == "Surface") df$mean <- df$v1meansurf
        if(input$colorby == "Bottom") df$mean <- df$v1meanbot
        #Maps data values to colors using Purples and Blues colormap, define Min/Max
-       pal <- colorNumeric(palette = "PuBu",domain = c(0.005,0.25))
+       #pal <- colorNumeric(palette = "PuBu",domain = c(0.005,0.25))
+       pal <- colorNumeric(palette = turbo(256),domain = df$mean)
        #legend title, groupname is for layer control
        legendtitle <- "TP"
        groupname <- paste("Mean",input$colorby,"TP")
@@ -74,7 +76,7 @@ function(input, output, session) {
         if(input$colorby == "Surface") df$mean <- df$v2meansurf
         if(input$colorby == "Bottom") df$mean <- df$v2meanbot
         #Maps data values to colors using Purples and Blues colormap, define Min/Max
-        pal <- colorNumeric(palette = "PuBu",domain = c(0.005,0.25))
+        pal <- colorNumeric(palette = turbo(256),domain = df$mean)
         #legend title, groupname is for layer control
         legendtitle <- "TP"
         groupname <- paste("Mean",input$colorby,"TP")
