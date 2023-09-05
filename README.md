@@ -45,6 +45,12 @@ var1file <- "output_nosinkout/leem_0001.nc"
 var2file <- "output_sinkout/leem_0001.nc"
 ```
 
+If you want to try these out, you can get them from OSN.  (Change the directory paths or move the directories to the proper place.)
+```
+wget https://renc.osn.xsede.org/ees210015-bucket01/outputs_shiny-le.tar
+tar -xvf outputs_shiny-le.tar
+```
+
 If you don't want to write over the example rds in this repo, set `shiny_dir` to something else.  To run these instructions in the github repo without tracking the new data, name the directory with ***data_***.  (The ***.gitignore*** file ignores everything starting with ***data_***.)
 
 Click **Source**.  This should make new rds files in you `shiny_dir`, or overwrite the ones already in `data`.
