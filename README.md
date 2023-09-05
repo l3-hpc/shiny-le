@@ -28,23 +28,17 @@ cd shiny-le
 ## Open in R Studio
 I did not test these as batch scripts.
 
-In R Studio, go to the shiny-le folder(this repo), set as the working directory.  Open 
+In R Studio, go to the shiny-le folder(this repo), set as the working directory.
 
-## Add the model files
+Open ***global.R***, ***ui.R***, or ***server.R***.  Any of these will have a **Run App** button that the top (instead of **Source**).  Click **Run App** to run R Shiny locally.  It should work, after installing the proper packages
+
+## Add and reformat new model files
 Add FVCOM model outputs to a directory named starting with ***output***. (The ***.gitignore*** file ignores everything starting with ***output***.)For the example, I am using:
 ```
 output_sinkout
 output_nosinkout
 ```
 
-## Open in R Studio
-I did not test these as batch scripts.
-
-In R Studio, go to the shiny-le folder(this repo), set as the working directory.  
-
-Open ***global.R***, ***ui.R***, or ***server.R***.  Any of these will have a **Run App** button that the top (instead of **Source**).  Click **Run App** to run R Shiny locally.
-
-## Reformat the data
 Open ***ReformatModelData_allnodes.R***, set the path for the FVCOM outputs.  They should contain the variable "TP". 
 ```
 #--Model data
