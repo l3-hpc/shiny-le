@@ -20,15 +20,17 @@ Required libraries for R Shiny App
 - dplyr
 
 ## Get the repo
+You can get the repo with `git clone`:
 ```
 git clone https://github.com/l3-hpc/shiny-le.git
 cd shiny-le
 ```
+Or by downloading the repo by going to [shiny-le](https://github.com/l3-hpc/shiny-le.git), click the green 'Code' button, then select 'Download ZIP'.
 
 ## Open in R Studio
 I did not test these as batch scripts.
 
-In R Studio, go to the shiny-le folder(this repo), set as the working directory.
+In R Studio, in the 'Files' window(bottom right panel, first tab), navigate to the shiny-le folder(this repo).  Click 'More'(next to the gear icon), and select 'Set as Working Directory'.
 
 Open ***global.R***, ***ui.R***, or ***server.R***.  Any of these will have a **Run App** button that the top (instead of **Source**).  Click **Run App** to run R Shiny locally.  It should work, after installing the proper packages
 
