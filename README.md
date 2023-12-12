@@ -111,3 +111,8 @@ Make a small version, just TP:
 ncks -d time,0,979,4  TP.nc TP_crop.nc
 ```
 
+## Wilson's files
+There were 3 more timesteps in LEEM (from 6, 12, and 18 hrs probably) so I cut that:
+```
+ncks -d time,0,976 TP.nc TP_crop.nc
+```
